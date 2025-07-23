@@ -1,11 +1,10 @@
 type UserPart = {
-  id: string;
   name: string;
   age: number;
 };
 
 type UserPart2 = {
-  id: number;
+  id: number | string;
   phone: string;
 };
 

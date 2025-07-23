@@ -1,10 +1,10 @@
-type UserPart = {
+interface UserPart {
   id: string;
   name: string;
   age: number;
 };
 
-type UserPart2 = {
+interface UserPart2 {
   id: number;
   phone: string;
 };

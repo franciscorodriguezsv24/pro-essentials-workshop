@@ -1,6 +1,7 @@
-type Environment = "development" | "production" | "staging";
+type Environment = "development" | "production" | "staging" | "notAllowed";
 
-type Configurations = unknown;
+type Configurations = 
+  Record<Environment,{ apiBaseUrl: string; timeout: number }>;
 
 const configurations: Configurations = {
   development: {

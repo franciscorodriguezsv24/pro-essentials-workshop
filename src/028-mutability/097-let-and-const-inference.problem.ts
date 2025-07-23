@@ -9,5 +9,5 @@ type ButtonAttributes = {
 };
 
 const buttonAttributes: ButtonAttributes = {
-  type,
+  type: "submit",
 };
