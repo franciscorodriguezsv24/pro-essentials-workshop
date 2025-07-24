@@ -1,4 +1,9 @@
 import { Equal, Expect } from "@total-typescript/helpers";
+type DataShape<TData> =
+  | {
+    data: TData;
+    }
+  | ErrorShape
 
 type ErrorShape = {
   error: {
@@ -6,26 +11,17 @@ type ErrorShape = {
   };
 };
 
-type UserDataShape =
-  | {
-      data: {
+type UserDataShape = DataShape<{
         id: string;
         name: string;
         email: string;
-      };
-    }
-  | ErrorShape;
+}>
 
-type PostDataShape =
-  | {
-      data: {
+type PostDataShape = DataShape<{
         id: string;
         title: string;
         body: string;
-      };
-    }
-  | ErrorShape;
-
+}>
 // TESTS
 
 type tests = [
